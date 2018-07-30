@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+	<!-- jQuery文件 -->
+	<script src="../bootstrap/js/jquery-3.2.0.min.js"></script>
+	<!-- Bootstrap 核心 JavaScript 文件 -->
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+  <div class="navbar-header navbar-brand">
+  	<span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+  </div>
+    <ul class="nav navbar-nav navbar-left">
+    	<h class="navbar-brand" style="font-weight:bold;font-size: 1.5em;">阡陌图书管理系统</h>
+	</ul>
+     	<ul class="nav navbar-nav navbar-right">
+        	<li class="dropdown">
+          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">登录 <span class="caret"></span></a>
+          	<ul class="dropdown-menu">
+            	<li><a herf="#" data-toggle="modal" data-target="#mymodal-data1">用户登录</a></li>
+            	<li><a data-toggle="modal" data-target="#mymodal-data2">管理员登录</a></li>
+          	</ul>
+        	</li>
+     	 </ul>
+  </div>
+</div>
+<div>
+	<img src="../images/welcome3.jpg" style="width:100%;height:auto;">
+</div>
+<!-- 模态弹出窗内容 -->
+<div class="modal" id="mymodal-data1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm" style="top:20%">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title">用户登录</h4>
+			</div>			
+			<div class="modal-body">
+			<form id="userlogin" class="form-horizontal" role="form" method="post" action="../php/login_stu.php">
+				<div class="input-group input-group-md">
+				<span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-credit-card" aria-hidden="true"></i></span>
+				<input type="text" name="cno" class="form-control" placeholder="请输入借书证号" aria-describedby="sizing-addon1">
+				</div>
+				<div class="input-group input-group-md">
+				<span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span>
+				<input type="password" name="password" class="form-control" placeholder="密码" aria-describedby="sizing-addon1">
+				</div>
+				<hr/>
+				<button type="submit" class="btn btn-success btn-block">登录</button>
+			</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 模态弹出窗内容 -->
+<div class="modal" id="mymodal-data2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm" style="top:20%">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title">管理员登录</h4>
+			</div>			
+			<div class="modal-body">
+			<form id="managerlogin" class="form-horizontal" role="form" method="post" action="../php/login_admin.php">
+				<div class="input-group input-group-md">
+				<span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+				<input type="text" name="aid" class="form-control" placeholder="用户名" aria-describedby="sizing-addon1">
+				</div>
+				<div class="input-group input-group-md">
+				<span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span>
+				<input type="password" name="password" class="form-control" placeholder="密码" aria-describedby="sizing-addon1">
+				</div>
+				<hr/>
+				<button type="submit" class="btn btn-success btn-block">登录</button>
+			</form>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+

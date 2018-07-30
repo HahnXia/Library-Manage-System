@@ -1,0 +1,39 @@
+CREATE DATABASE Lib;
+use lib;
+CREATE TABLE admin (
+	id CHAR (8),
+	pass VARCHAR (50),
+	NAME VARCHAR (50),
+	telephone VARCHAR (50),
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE book (
+	bno CHAR (8),
+	category VARCHAR (8),
+	title VARCHAR (40),
+	press VARCHAR (30),
+	YEAR INT,
+	author VARCHAR (20),
+	price DECIMAL (7, 2),
+	total INT,
+	stock INT,
+	PRIMARY KEY (bno)
+);
+
+CREATE TABLE borrow (
+	cno CHAR (7),
+	bno CHAR (8),
+	borrow_date datetime,
+	return_date datetime
+);
+
+CREATE TABLE card (
+	cno CHAR (7),
+	pass CHAR (7),
+	NAME VARCHAR (50),
+	department VARCHAR (50),
+	type CHAR (1),
+	PRIMARY KEY (cno)
+);
+
